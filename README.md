@@ -9,15 +9,11 @@ course-repo/
 │   ├── module-1/
 │   │   ├── topic-1.md
 │   │   ├── topic-2.md
-│   │   ├── video-topic-3/
-│   │   │   ├── video.md
-│   │   │   ├── video.mp4 (optional, can be hosted externally)
+│   │   ├── topic-3.md
 │   ├── module-2/
 │   │   ├── topic-1.md
 │   │   ├── topic-2.md
-│   │   ├── video-topic-3/
-│   │   │   ├── video.md
-│   │   │   ├── video.mp4
+│   │   ├── topic-3.md
 │── README.md
 │── .gitignore
 │── config.json (optional, metadata for course settings)
@@ -27,44 +23,20 @@ course-repo/
 
 ### 1. Creating Modules and Topics
 - Each **module** is a directory inside `modules/`.
-- Each **topic** is either a Markdown (`.md`) file or a subdirectory (if it's a video topic).
-- Markdown files should follow the format described below.
+- Each **topic** is either a Markdown (`.md`) file.
 
-### 2. Markdown Format for Topics
-Each Markdown topic should follow this format:
+Each Markdown topic should follow the below instructions for the content
 
-```markdown
-# Topic Title
+1. Content should be in Markdown format
+2. Content can have images, gifs, videos
+3. Content can be multi paragraph
 
-## Learning Objectives
-- Objective 1
-- Objective 2
-- Objective 3
 
-## Content
-(Content goes here in markdown format)
+### 2. Videos in Topics
+Content markdown support Video embedding, YouTube/ Vimeo embedding code can be placed. 
 
-## Summary
-(Summarize the key takeaways)
-```
-
-### 3. Adding Videos
-- For video topics, create a folder with a `video.md` file inside.
-- Videos should be stored externally (YouTube, Vimeo, or cloud storage) and linked inside `video.md`.
-- Example `video.md` format:
-
-```markdown
-# Topic Title (Video)
-
-## Video Link
-[Watch Video Here](https://example.com/video-link)
-
-## Summary
-(Summary of the video content)
-```
-
-### 4. Course Metadata
-A `config.json` file can be used to store metadata about the course, such as title, description, and module structure.
+### 3. Course Metadata
+A `config.json` file is used to store metadata about the course, such as title, description, and respective .md file.
 
 ```json
 {
@@ -72,8 +44,16 @@ A `config.json` file can be used to store metadata about the course, such as tit
   "description": "A brief description of the course.",
   "modules": [
     {
-      "title": "Module 1",
-      "topics": ["Topic 1", "Topic 2", "Video Topic 3"]
+      "title": "Title of the module",
+      "description" : "Description of the module",
+      "folder": "folder name of the module. ex. module-1",
+      "topics": [{
+        {
+          "title": "Title of the topic",
+          "description": "Description of the topic",
+          "file": "file name of the topic ex. module-1/topic-1.md"
+        },
+      }]
     }
   ]
 }
@@ -82,8 +62,7 @@ A `config.json` file can be used to store metadata about the course, such as tit
 ## Contribution Guidelines
 - Follow the structure strictly.
 - Use clear, concise language in markdown content.
-- Ensure all video links are accessible.
-- Commit changes with meaningful messages.
+- Ensure all video links are accessible (made public/ unlisted).
 
 ---
 This structure ensures consistency and allows easy navigation for learners.

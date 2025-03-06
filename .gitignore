@@ -1,0 +1,26 @@
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Dependency directories
+node_modules/
+venv/
+
+# Build output
+dist/
+build/
+
+# Environment files
+.env
+.env.local
+
+# Video files (if stored locally)
+*.mp4
+*.mov
+*.avi 

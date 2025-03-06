@@ -1,0 +1,47 @@
+{
+  "title": "Example Course",
+  "description": "A structured course template for example course",
+  "modules": [
+    {
+      "title": "Module 1 Title",
+      "description": "Description of the module",
+      "folder": "module-1",
+      "topics": [
+        {
+          "title": "Topic 1 Title",
+          "file": "topic-1.md"
+        },
+        {
+          "title": "Topic 2 Title",
+          "file": "topic-2.md"
+        },
+        {
+          "title": "Video Topic 3 Title",
+          "file": "video-topic-3.mp4"
+        }
+      ]
+    },
+    {
+      "title": "Module 2 Title",
+      "description": "Description of the module",
+      "folder": "module-2",
+      "topics": [
+        {
+          "title": "Topic 1 Title",
+          "file": "topic-1.md"
+        }
+      ]
+    },
+    {
+      "title": "Module 3 Title",
+      "description": "Description of the module",
+      "folder": "module-3",
+      "topics": [
+        {
+          "title": "Topic 1 Title",
+          "file": "topic-1.md"
+        }
+      ]
+    }
+  ]
+}
